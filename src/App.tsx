@@ -1,33 +1,37 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+
+import FormularioBuscarSocio from './FormularioBuscarSocio.tsx'
+import './index.css'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="bg-red-600 text-center mx-auto w-full text-white">
+        <h1 className="text-3xl font-bold">
+          Montevideo BBC
+        </h1>
+        <h2>
+          Sistema de gestión de socios
+        </h2>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <div className="flex">
+        <div className="w-1/3 flex flex-col items-start">
+          <button className="w-full border bg-red-600 hover:bg-red-700 px-4 py-2 text-white">
+            Cuotas
+          </button>
+          <button className="w-full border bg-red-600 hover:bg-red-700 px-4 py-2 text-white">
+            Buscar Socio
+          </button>
+        
+        </div>
+        <div className="bg-blue-100 w-full">
+          <FormularioBuscarSocio />
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
