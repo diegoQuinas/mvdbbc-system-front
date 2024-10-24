@@ -4,13 +4,16 @@ function TemplateHeader(){
         <header className="bg-red-800 text-white p-4">
           <div className="bg-red-700 text-center mx-auto w-full text-white">
             <div className="flex">
-            <div className="col w-1/6">
-            <img 
-                src='./src/assets/R-kANmC2_400x400.jpg'
-                className="w-16 h-16 rounded-full object-cover"
-              />
+
+            <div className="col w-full">
+            <div className="flex justify-center items-center p-2">
+              <div className="bg-red-800 p-2 rounded-full">
+                <img 
+                  src='./src/assets/R-kANmC2_400x400.jpg'
+                  className="w-20 h-20 rounded-full object-cover"
+                />
+              </div>
             </div>
-            <div className="col w-5/6">
             <h1 className="text-3xl font-bold">
                Montevideo BBC
             </h1>

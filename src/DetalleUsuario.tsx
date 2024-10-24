@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useLocation } from 'react-router-dom';
 import TemplateHeader from './Templates/TemplateHeader';
 import TemplateMenu from './Templates/TemplateMenu';
@@ -7,6 +7,8 @@ import TemplateMenu from './Templates/TemplateMenu';
 function Detalle() {
   const location = useLocation();
   const { socio } = location.state || {}; // Desestructura los datos del socio
+  
+  
 
   return (
     <>
@@ -24,7 +26,7 @@ function Detalle() {
           {/* Mostrar los detalles del socio si están disponibles */}
           {socio ? (
             <div className="mt-4 p-4 border border-gray-300 rounded-lg shadow-md bg-white w-full">
-                            {socio.foto && (
+              {socio.foto && (
                 <img 
                   src={socio.foto} 
                   alt={`${socio.nombre} ${socio.apellido}`} 
@@ -41,7 +43,9 @@ function Detalle() {
 
             </div>
           ) : (
-            <p className="text-red-500">No hay datos del socio disponibles.</p>
+            <div className="mt-4 p-4 border border-gray-300 rounded-lg shadow-md bg-white w-full">
+              <p className="text-red-500">No hay datos del socio disponibles.</p>
+            </div>
           )}
         </div>
       </div>

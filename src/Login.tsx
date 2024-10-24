@@ -12,13 +12,17 @@ function Login() {
   const [usuario, setUsuario] = useState(""); // Estado para el usuario
   const [contrasenia, setContrasenia] = useState(""); // Estado para la contraseña
   const navigate = useNavigate(); // Inicializa useNavigate
+  const [estadoLogin,setEstado]=useState("NO LOGIN")
 
   const handleClick = () => {
     // Verifica las credenciales
     if (usuario === "admin" && contrasenia === "admin") {
-      navigate("/Buscar"); // Redirige a /Buscar si las credenciales son correctas
+      const nuevoEstado = "LOGIN CORRECTO";
+      setEstado(nuevoEstado);
+      localStorage.setItem("estadoLogin", nuevoEstado); // Guarda el estado en localStorage
+      navigate("/Buscar");
     } else {
-      alert("Usuario o contraseña incorrectos. Intente con usurio: admin password: admin"); // Muestra un mensaje si son incorrectos
+      alert("Usuario o contraseña incorrectos.");
     }
   };
 

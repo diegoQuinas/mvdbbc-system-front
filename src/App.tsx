@@ -8,10 +8,14 @@ import Listar from './ListadoSocios.tsx'
 import Detalle from './DetalleUsuario.tsx'
 
   function App() {
+
+    localStorage.setItem("estadoLogin", "NO LOGIN");
+
     return (
       <BrowserRouter>
         <Routes>
         <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<Login />} />
         <Route path="/form" element={<FormularioBuscarSocio />} />
         <Route path="/buscar" element={<Buscar />} />
         <Route path="/listaUsr" element={<Listar />} />
