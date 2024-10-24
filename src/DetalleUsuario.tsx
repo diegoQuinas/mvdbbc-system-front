@@ -2,6 +2,8 @@
 import { useLocation } from 'react-router-dom';
 import TemplateHeader from './Templates/TemplateHeader';
 import TemplateMenu from './Templates/TemplateMenu';
+import TablaDatos  from './HistorialSocio';
+import './index copy.css'
 
 
 function Detalle() {
@@ -40,8 +42,13 @@ function Detalle() {
               <p><strong>Documento:</strong> {socio.documento}</p>
               <p><strong>Fecha de Nacimiento:</strong> {socio.fechaNacimiento}</p>
               <p><strong >Vencimiento Cuota:</strong> 10/10/2024</p>
+              <div className="mt-4 p-4 border border-gray-300 rounded-lg shadow-md bg-white w-full">
+                <TablaDatos/>
+              </div>
 
             </div>
+
+
           ) : (
             <div className="mt-4 p-4 border border-gray-300 rounded-lg shadow-md bg-white w-full">
               <p className="text-red-500">No hay datos del socio disponibles.</p>
