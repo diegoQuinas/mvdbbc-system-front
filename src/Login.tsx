@@ -12,7 +12,7 @@ function Login() {
   const [usuario, setUsuario] = useState(""); // Estado para el usuario
   const [contrasenia, setContrasenia] = useState(""); // Estado para la contraseña
   const navigate = useNavigate(); // Inicializa useNavigate
-  const [estadoLogin,setEstado]=useState("NO LOGIN")
+  const [estadoLogin, setEstado] = useState("NO LOGIN")
 
   const handleClick = () => {
     // Verifica las credenciales
@@ -28,11 +28,9 @@ function Login() {
 
   return (
     <>
-      <TemplateHeader />
 
       <div className="flex h-screen">
         <div className="w-1/6 bg-blue-100 h-screen">
-          <TemplateMenu />
         </div>
         <div className="w-5/6 bg-blue-100 flex justify-center items-start">
           <div className="m-4 flex flex-col w-full items-start space-y-3 pr-8">
