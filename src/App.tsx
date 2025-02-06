@@ -3,7 +3,6 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Login from "./pages/Login";
 import SearchMembers from "./pages/SearchMembers";
-import MemberDetail from "./pages/MemberDetail";
 
 function App() {
   return (
