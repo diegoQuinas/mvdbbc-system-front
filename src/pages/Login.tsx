@@ -42,7 +42,7 @@ const Login: React.FC = () => {
         {/* Escudo del Club de Basket Montevideo */}
         <div className="flex justify-center mb-6">
           <img
-            src="./public/club_logo.jpg"
+            src="/club_logo.jpg"
             alt="Escudo del Club de Basket Montevideo"
             className="w-24 h-24 rounded-full"
           />

@@ -40,7 +40,7 @@ const MemberSearch: React.FC = () => {
       {/* Escudo del club */}
       <div className="mb-8">
         <img
-          src="./public/club_logo.jpg" // Ruta a la imagen en la carpeta public
+          src="/club_logo.jpg" // Ruta a la imagen en la carpeta public
           alt="Escudo del Club"
           className="w-32 h-32 rounded-full border-4 border-red-600 shadow-lg"
         />
