@@ -1,38 +1,23 @@
-
-import FormularioBuscarSocio from './FormularioBuscarSocio.tsx';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './index.css'
-import Login from './Login.tsx';
-import TemplateHeader from './Templates/TemplateHeader.tsx';
-import TemplateMenu from './Templates/TemplateMenu.tsx';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Login from "./pages/Login";
+import SearchMembers from "./pages/SearchMembers";
+import MemberDetail from "./pages/MemberDetail";
 
 function App() {
-
-  localStorage.setItem("estadoLogin", "NO LOGIN");
-
   return (
-    <>
-      <TemplateHeader />
-
-      <div className="flex h-screen">
-        {/* Menu Lateral */}
-        <div className="w-1/6 bg-blue-100 h-screen">
-          <TemplateMenu />
-        </div>
-
-        {/* Contenedor del Formulario */}
-        <div className="w-5/6 bg-blue-100 flex justify-center items-start">
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Login />} />
-              <Route path="/buscar-socio" element={<FormularioBuscarSocio />} />
-            </Routes>
-          </BrowserRouter>
-        </div>
+    <Router>
+      <div>
+        <ToastContainer />
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/search" element={<SearchMembers />} />
+          <Route path="/member/:id" element={<MemberDetail />} />
+        </Routes>
       </div>
-    </>
-  )
+    </Router>
+  );
 }
 
-
-export default App
+export default App;
